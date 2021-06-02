@@ -1,0 +1,18 @@
+
+input {
+  width: 250px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 60px;
+  padding: 5px 0 5px 0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.widebutton {
+  width: 125px;
+}

@@ -1,0 +1,74 @@
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+
+      <title>電卓</title>
+
+      </head>
+      <body>
+        
+        <input />
+        
+        <script>
+        let myFlg 
+        let total = document.querySelector('input')
+        
+          function add(date) {
+            myFlg = 0;
+            total.value += date;
+          }
+          
+          function calc(date) {
+            if(myFlg==0){
+              myFlg = 1;
+              total.value += date;
+            }
+          }
+          
+          function update(date){
+              total.value = date;
+            }
+            
+          function enter(){
+            const v = document.querySelector('input').value
+            const f = new Function('return ' + v);
+            update( f().toString() )
+          }
+          
+        </script>  
+         
+          
+        <br>
+          <button onclick="add(7)">7</button>
+          <button onclick="add(8)">8</button>
+          <button onclick="add(9)">9</button>
+          <button onclick="calc('+')">+</button>
+        
+        <br>
+          <button onclick="add(4)">4</button>
+          <button onclick="add(5)">5</button>
+          <button onclick="add(6)">6</button>
+          <button onclick="calc('-')">-</button>  
+        
+        <br>
+          <button onclick="add(1)">1</button>
+          <button onclick="add(2)">2</button>
+          <button onclick="add(3)">3</button>
+          <button onclick="calc('*')">*</button>   
+        
+        <br>
+          <button onclick="add(0)">0</button>
+          <button onclick="add('00')">00</button>
+          <button onclick="calc('.')">.</button>
+          <button onclick="calc('/')">/</button>     
+        
+        <br>
+          <button class="widebutton" onclick="update('')">AC</button>
+          <button class="widebutton" onclick="enter('')">=</button>
+        
+  
+        
+      </body>
+    </html>
